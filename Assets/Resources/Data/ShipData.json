@@ -1,0 +1,22 @@
+{
+  "Ship":[
+    {
+      "id" :"0",
+      "base_dmg" : "1",
+      "name":"Fighter",
+      "k_name":"전투기"
+    },
+    {
+      "id" :"1",
+      "base_dmg" : "2",
+      "name":"Attacker",
+      "k_name":"공격기"
+    },
+    {
+      "id" :"2",
+      "base_dmg" : "3",
+      "name":"Bomber",
+      "k_name":"폭격기"
+    }
+  ]
+}
