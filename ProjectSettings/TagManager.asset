@@ -17,8 +17,8 @@ TagManager:
   - 
   - 
   - Monster
-  - Ground
-  - Block
+  - Player
+  - Astroid
   - 
   - 
   - 
@@ -47,9 +47,12 @@ TagManager:
   - name: BackGround
     uniqueID: 1343015473
     locked: 0
-  - name: Effct
-    uniqueID: 1145003565
+  - name: Weapon
+    uniqueID: 802694221
     locked: 0
   - name: Creature
     uniqueID: 1615494347
+    locked: 0
+  - name: Effct
+    uniqueID: 1145003565
     locked: 0
