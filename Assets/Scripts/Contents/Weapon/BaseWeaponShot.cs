@@ -8,7 +8,9 @@ public abstract class BaseWeaponShot : MonoBehaviour
 {
     
     private float _speed = 10.0f;
+    private int _pow = 5;
     public virtual float Speed { get { return _speed; } set { _speed = value; } }
+    public virtual int Pow { get { return _pow; } set { _pow = value; } }
     
     
     void Start()
@@ -36,4 +38,7 @@ public abstract class BaseWeaponShot : MonoBehaviour
             Object.Destroy(gameObject,2.0f);;
         }
     }
+
+    protected abstract void OnTriggerEnter2D(Collider2D other);
+
 }

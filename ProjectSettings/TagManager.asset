@@ -7,6 +7,8 @@ TagManager:
   - Monster
   - Enemy
   - Asteroid
+  - PlayerShot
+  - MonsterShot
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - Monster
   - Player
   - Astroid
-  - 
-  - 
+  - PlayerShot
+  - MonsterShot
   - 
   - 
   - 

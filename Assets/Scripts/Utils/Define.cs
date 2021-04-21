@@ -25,4 +25,14 @@ public class Define
         Click,
         Drag,
     }
+    
+    public enum AsteroidsInfo
+    {
+        None,
+        Asteroid_001,
+        Asteroid_002,
+        Asteroid_003,
+        Asteroid_004,
+        MaxCount
+    }
 }
