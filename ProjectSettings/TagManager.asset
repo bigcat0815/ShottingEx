@@ -9,6 +9,7 @@ TagManager:
   - Asteroid
   - PlayerShot
   - MonsterShot
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Astroid
   - PlayerShot
   - MonsterShot
-  - 
+  - Item
   - 
   - 
   - 
@@ -51,6 +52,9 @@ TagManager:
     locked: 0
   - name: Weapon
     uniqueID: 802694221
+    locked: 0
+  - name: Item
+    uniqueID: 2769872417
     locked: 0
   - name: Creature
     uniqueID: 1615494347

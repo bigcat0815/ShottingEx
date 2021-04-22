@@ -21,20 +21,16 @@ public class PlayerWeaponShot : BaseWeaponShot
             ac.OnDamaged(Pow);
             
         }
-     
-           
-       
-        /*
-        else if (other.tag == "Enemy")
+        
+        else if (other.gameObject.tag == "Monster")
         {
-            EnemyController ec = other.gameObject.GetComponent<EnemyController>();
+            MonsterController ec = other.gameObject.GetComponent<MonsterController>();
             
-            GameObject go = Managers.Resource.Instantiate("Creatures/shotEffect");
+            GameObject go = Managers.Resource.Instantiate("Weapon/Effect/PlayerShotEffects");
             go.transform.position = other.gameObject.transform.position;
             Destroy(go,1.0f);
-            ec.OnDamged(POW);
+            ec.OnDamged(Pow);
         }
-        */
         
         Managers.Resource.Destroy(gameObject);
     }

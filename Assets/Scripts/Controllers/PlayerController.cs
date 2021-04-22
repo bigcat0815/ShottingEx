@@ -14,6 +14,27 @@ public class PlayerController : MonoBehaviour
     //발사
     private Coroutine _coWeaponBaseShot;
     private bool _isFire = false;
+
+    public int HP = 10;
+   
+    public void OnDamged(int power)
+    {
+        HP -= power;
+        if (HP <= 0)
+        {
+            OnSelfDestroys();
+        }
+    }
+    private void OnSelfDestroys()
+    {
+        
+        GameObject explosion = Managers.Resource.Instantiate("Effect/explosion"); 
+        explosion.transform.position = gameObject.transform.position;
+        Destroy(explosion,1.0f);
+       
+        Managers.Object.Remove(gameObject); 
+        // Managers.Resource.Destroy(gameObject);
+    }
     
     void Start()
     {
@@ -79,5 +100,9 @@ public class PlayerController : MonoBehaviour
         _coWeaponBaseShot = null;
        _isFire = false;
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        
+    }
 }

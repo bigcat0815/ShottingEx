@@ -96,10 +96,10 @@ public class AsteroidController : MonoBehaviour
 
     void OnDestroyObj()
     {
-        // GameObject coin = Managers.Resource.Instantiate("Item/Coin");
-        // coin.transform.position = gameObject.transform.position;
-        // CoinScript coinScript = coin.GetComponent<CoinScript>();
-        // coinScript.CoinSize = Coin;
+        GameObject coin = Managers.Resource.Instantiate("Item/Coin");
+        coin.transform.position = gameObject.transform.position;
+        ItemCoin coinScript = coin.GetComponent<ItemCoin>();
+        coinScript.CoinSize = Coin;
         //
        
         GameObject explosion = Managers.Resource.Instantiate("Effect/explosion"); 
@@ -110,5 +110,22 @@ public class AsteroidController : MonoBehaviour
         Managers.Object.Remove(gameObject); 
         Managers.Resource.Destroy(gameObject);
     }
+    
+    /*void OnDestroyObj(GameObject origin,int Coin,GameObject coinObj, GameObject effectObj)
+    {
+        GameObject coin = Managers.Resource.Instantiate("Item/Coin");
+        coin.transform.position = gameObject.transform.position;
+        ItemCoin coinScript = coin.GetComponent<ItemCoin>();
+        coinScript.CoinSize = Coin;
+        //
+       
+        GameObject explosion = Managers.Resource.Instantiate("Effect/explosion"); 
+        explosion.transform.position = gameObject.transform.position;
+        Destroy(explosion,1.0f);
+        // explosion.GetComponent<Animator>().Play("explosionAnim");
+
+        Managers.Object.Remove(gameObject); 
+        Managers.Resource.Destroy(gameObject);
+    }*/
     
 }

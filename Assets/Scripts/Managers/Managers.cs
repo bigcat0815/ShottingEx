@@ -19,10 +19,12 @@ public class Managers : MonoBehaviour
 
     private MapManager _map = new MapManager();
     private ObjectManager _object = new ObjectManager();
+    private GameManagerEX _gameManagerEx = new GameManagerEX();
 
     
     public static MapManager Map { get { return Instance._map; } }
     public static ObjectManager Object { get { return Instance._object; } }
+    public static GameManagerEX GMex { get { return Instance._gameManagerEx; } }
     
     #endregion
 
