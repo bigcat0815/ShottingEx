@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class GameManagerEX
 {
-    public Action OnSetUICoin;
+    public Action<int> OnSetUICoin;
 
     #region Gold
-
+    
     //총 Gold
     private int _coinTotal = 0;
     public int CoinTotal
@@ -24,7 +24,7 @@ public class GameManagerEX
             _coinTotal += value;
             PlayerPrefs.SetInt("TotalCoin", _coinTotal);
             
-           // OnSetUICoin.Invoke();
+            OnSetUICoin.Invoke(_coinTotal);
         }
     }
     
@@ -42,8 +42,6 @@ public class GameManagerEX
         Debug.Log($"토탈 코인 {CoinTotal}");
     }
     
-
     #endregion
 
-    
 }

@@ -23,10 +23,15 @@ public class GameScene : BaseScene
         //카메라범위
         ScreenMaxRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)).x;
         
+        //UI
+        Managers.UI.ShowSceneUI<UI_Coin>();
+        
         //플레이어
         GameObject player = Managers.Resource.Instantiate("Creatures/Player/Player");
         player.name = "Player";
         Managers.Object.Add(player);
+        
+        
         
        //소행성
         _asteroidMaxCount = (int)Define.AsteroidsInfo.MaxCount;
@@ -94,7 +99,6 @@ public class GameScene : BaseScene
             _isAsteroid = true;
             _coAsteroidTime = StartCoroutine("AsteroidMake", _asteroidCount);
         }
-        
         
     }
 
