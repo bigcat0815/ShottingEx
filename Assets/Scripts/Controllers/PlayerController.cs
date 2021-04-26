@@ -33,13 +33,13 @@ public class PlayerController : MonoBehaviour
         Destroy(explosion,1.0f);
        
         Managers.Object.Remove(gameObject); 
-        // Managers.Resource.Destroy(gameObject);
+        Managers.Resource.Destroy(gameObject);
     }
     
     void Start()
     {
-        Managers.Input.OnKeyAction -= OnKeyInput;
-        Managers.Input.OnKeyAction += OnKeyInput;
+        /*Managers.Input.OnKeyAction -= OnKeyInput;
+        Managers.Input.OnKeyAction += OnKeyInput;*/
 
         _min = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0));
         _max = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-           
+         OnKeyInput();
     }
 
     void OnKeyInput()

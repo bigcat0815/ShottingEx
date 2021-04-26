@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PausePanel : UI_Base
@@ -53,7 +54,8 @@ public class PausePanel : UI_Base
         {
             Time.timeScale = 1;
             pausePanel.SetActive(false);
-            
+            SceneManager.LoadScene("Scenes/Main");
+
         },Define.UIEvent.Click);
         
         /*Bind<GameObject>(typeof(GameObjects));
